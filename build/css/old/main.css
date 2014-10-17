@@ -1,0 +1,21 @@
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html {
+  font-size: 1.125em;
+  line-height: 1.4;
+  overflow-y: scroll;
+  min-height: 100%; }
+
+body {
+  background-color: #fff;
+  line-height: 1.4; }
+
+.wrapper {
+  max-width: 1024px;
+  padding: 0 12px; }
+
+.breadcrumbs li {
+  float: left; }
+
+/*# sourceMappingURL=main.css.map */

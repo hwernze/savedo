@@ -1,0 +1,33 @@
+$primary-blue: #104684;
+$primary-orange: #F16531;
+$primary-white:#FFFFFF;
+$primary-black:#000000;
+
+$light-grey: #EAEAEA;
+$light-orange: #FEEBE4;
+$light-orange2: #F8D7C8;
+$light-blue:#DEE8F3;
+
+$font-family-sans-serif: "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif!default;
+
+// break points
+$medium-start: 640px!default;
+$large-start: 960px!default;
+
+$grid-columns: 12!default;
+
+$grid-gutter-width:20px;
+
+// use: @media #{$mq-medium} {}
+$mq-medium: "only screen and ( min-width:#{$medium-start} )"!default;
+$mq-large: "only screen and ( min-width:#{$large-start} )"!default;
+
+
+
+.clear:after,
+.clearfix:after,
+.cf:after{
+    content:"";
+    display:table;
+    clear:both;
+}

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <title>Savedo</title>
+    <meta name="description" content="Savedo client portal ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="build/css/normalize.css">
+    <link rel="stylesheet" href="build/css/lemonade.min.css">
+    <link rel="stylesheet" href="build/css/savedo.css">
+
+    <script src="build/js/lib/jquery-1.11.1.min.js"></script>
+    <script src="build/js/main.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <div class="brand">
+                <img class="logo" src="build/img/savedo.png">
+                <h1 class="titel">SAVEDO</h1>
+                <h2 class="slogan">ZINSPORTAL</h2>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="#Privatekunde">Privat-Client</a></li>
+                <li><a href="#Login">Login</a></li>
+                <li><a href="#MySavedo">MySavedo</a></li>
+            </ul>
+        </div>
+        <main class=" main-content">
+            <aside >
+                <ul class="side-nav">
+                    <li>
+                        <a dataId="index-screen" href="#">MySavedo</a>
+                        <ul>
+                            <li><a dataId="payee-screen"href="#">Create Payee</a></li>
+                            <li><a dataId="balance-screen" href="#">Balance</a></li>
+                            <li><a dataId="transfer-screen" href="#">Make Payment</a></li>
+                            <li><a href="#">Notifications</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Credits</a>
+                    </li>
+                    <li>
+                        <a href="#">Service</a>
+                    </li>
+                    <li>
+                        <a href="#">Investment-Journal</a>
+                    </li>
+                </ul>
+            </aside>
+            <article class="screens " id="index-screen">
+                <div class="panel">
+                    <header class="article-header">
+                        <h1>MySavedo</h1>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    </header>
+                    
+                    <div class="article-body">
+                        <div class="btn-nav">
+                            <div class="navBtn">
+                                <a dataId="payee-screen" href="#"><span>Create Payee</span><img src="build/img/transfer.png"></a>
+                            </div>
+                            <div class="navBtn">
+                                <a dataId="balance-screen" href="#"><span>Balance</span><img src="build/img/balance.png"></a>
+                            </div>
+                            <div class="navBtn">
+                                <a dataId="transfer-screen" href="#"><span>Make Payment</span><img src="build/img/payees.png"></a>
+                            </div>
+                            <div class="navBtn">
+                                <a dataId="" href="#"><span>Notifications</span><img src="build/img/messages.png"></a>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <a class="form-back" href="#">more</a>
+                        </div><!-- form-row -->
+                    </div>
+                </div>
+            </article>
+            <article class="screens hide" id="payee-screen">
+                <div class="panel">
+                    <div class="form-steps">
+                        <div class="step step-1">
+                           
+                            <span class="step-titel">Create a Payee</span>
+                        </div>
+                       
+                    </div>
+                    <div class="form-container">
+                        <form>
+                            <div class="form-row">
+                                <div class="label">
+                                    <label>Name or Company</label>
+                                </div>
+                                <div class="input">
+                                    <input id="user_Name"type="text">
+                                </div>
+                            </div><!-- form-row -->
+                            <div class="form-row">
+                                <div class="label">
+                                    <label>IBAN</label>
+                                </div>
+                                <div class="input">
+                                    <input id="iban"type="text">
+                                </div>
+                            </div><!-- form-row -->
+                            <div class="form-row">
+                                <div class="label">
+                                    <label>BIC(SWIFT-Code)</label>
+                                </div>
+                                <div class="input">
+                                    <input id="bic"type="text">
+                                </div>
+                            </div><!-- form-row -->
+                            
+
+                            <div class="form-row">
+                                <div class="label">
+                                    <label>Note</label>
+                                </div>
+                                <div class="input">
+                                    <input type="text">
+                                </div>
+                            </div><!-- form-row -->
+
+                            <div class="form-row">
+                                <div class="label">
+                                    <label>Date</label>
+                                </div>
+                                <div class="input input-small">
+                                    <input type="text">
+                                </div>
+                            </div><!-- form-row -->
+
+
+                            <div class="form-row">
+                                <a class="form-next" id="createPayee"href="#">Create</a>
+                                <a class="form-back" href="">Back</a>
+                            </div><!-- form-row -->
+
+                        </form>
+                    </div> <!-- form-container -->
+                </div>
+            </article>
+            <article class="screens hide" id="balance-screen">
+                <div class="panel">
+                    <h2>Your Balance</h2>
+                    <p> 5000 € </p>
+
+                    <div class="form-row">
+                        <a class="form-next" href="">Back</a>
+                    </div><!-- form-row -->
+
+                </div>
+            </article>
+            <article class="screens hide" id="transfer-screen">
+                <div class="panel">
+                     <div class="form-container">
+                        <form>
+                            <div class="form-row">
+                                <div class="label">
+                                    <label>Payee</label>
+                                </div>
+                                <div class="input">
+                                    <select>
+                                        <option> Payee 1</option>
+                                        <option> Payee 2</option>
+                                        <option> Payee 3</option>
+                                        <option> Payee 4</option>
+                                    </select>
+                                </div>
+                            </div><!-- form-row -->
+                            <div class="form-row">
+                                <div class="label">
+                                    <label>Amount</label>
+                                </div>
+                                <div class="input">
+                                    <input type="text">
+                                </div>
+                            </div><!-- form-row -->
+
+                            <div class="form-row">
+                                <a class="form-next" href="#">Send</a>
+                                <a class="form-back" href="">Back</a>
+                            </div><!-- form-row -->
+
+                        </form>
+                    </div> <!-- form-container -->
+                </div>
+            </article>
+        </main>
+        <footer class="main-footer"> </footer>
+    </div> <!-- wrapper -->
+</body>
+</html>

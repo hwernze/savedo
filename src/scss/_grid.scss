@@ -1,0 +1,57 @@
+
+////////////////////////////////////////////////////////////////////////
+//// Grid Setup
+////////////////////////////////////////////////////////////////////////
+
+.grid{ 
+
+	@extend .cf;
+	
+    list-style:none;
+    margin-left:-$grid-gutter-width/2;
+    margin-right:-$grid-gutter-width/2;
+    margin-bottom:0;
+    
+    // @TODO
+    // To tiny prevent mobile resolution from squishing things.
+    // This should be a very small number.
+    // min-width: 240px;
+    
+	> * { 
+		display:block;
+		float:left;
+	    vertical-align:top;
+	    padding-left:$grid-gutter-width/2;
+	    padding-right:$grid-gutter-width/2;
+	    &.cols-centered{
+			position: relative;
+			margin:0 auto;
+			padding:0;
+			float:none;
+		}	
+	}
+
+	> .grid{ margin-left:0; }
+	
+	// 
+	// Column Width
+	//
+
+	@mixin cols-setup($namespace: "") {
+		@for $i from 1 through $grid-columns {
+			&.#{$namespace}cols-#{$i} > *,
+			body & > .#{$namespace}cols-#{$i}{ width:(100%/$grid-columns)*$i; }
+		}
+	}
+	@include cols-setup();
+	@media #{$mq-medium} { @include cols-setup("medium-");	}
+	@media #{$mq-large} { @include cols-setup("large-"); }
+
+	
+}
+
+
+
+
+
+
